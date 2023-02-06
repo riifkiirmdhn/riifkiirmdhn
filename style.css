@@ -181,6 +181,13 @@ header .navbar ul li a:hover {
 
 .home h1 span {
     color: var(--yellow);
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
 }
 
 .home p {
@@ -259,10 +266,7 @@ header .navbar ul li a:hover {
 
 .education .box-container .box span {
     font-size: 1.3rem;
-    background: #222;
-    color: #fff;
-    border-radius: 5rem;
-    padding: .5rem 2.5rem;
+    color: var(--yellow);
 }
 
 .education .box-container .box h3 {
@@ -342,7 +346,7 @@ header .navbar ul li a:hover {
     padding: 1.5rem;
     margin: 1rem 0;
     background: #3333;
-    color: #fff;
+    color: #020000;
     text-transform: none;
     font-size: 1.7rem;
     width: 100%;
@@ -375,6 +379,7 @@ header .navbar ul li a:hover {
 
 .contact .row .content .info h3 i {
     padding-right: 1rem;
+    text-transform: lowercase;
     color: var(--yellow);
 }
 

@@ -1,38 +1,47 @@
-$(document).ready(function(){
+var typed = new Typed(".multiple-text", {
+    strings: ["Junior Web Development", "Software Engineer", "Hardware Engineer", "Network Engineer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+})
 
-  $('#menu').click(function(){
-    $(this).toggleClass('fa-times');
-    $('header').toggleClass('toggle');
-  });
 
-  $(window).on('scroll load',function(){
+$(document).ready(function() {
 
-    $('#menu').removeClass('fa-times');
-    $('header').removeClass('toggle');
+    $('#menu').click(function() {
+        $(this).toggleClass('fa-times');
+        $('header').toggleClass('toggle');
+    });
 
-    if($(window).scrollTop() > 0){
-      $('.top').show();
-    }else{
-      $('.top').hide();
-    }
+    $(window).on('scroll load', function() {
 
-  });
+        $('#menu').removeClass('fa-times');
+        $('header').removeClass('toggle');
 
-  // smooth scrolling 
+        if ($(window).scrollTop() > 0) {
+            $('.top').show();
+        } else {
+            $('.top').hide();
+        }
 
-  $('a[href*="#"]').on('click',function(e){
+    });
 
-    e.preventDefault();
+    // smooth scrolling 
 
-    $('html, body').animate({
+    $('a[href*="#"]').on('click', function(e) {
 
-      scrollTop : $($(this).attr('href')).offset().top,
+        e.preventDefault();
 
-    },
-      500, 
-      'linear'
-    );
+        $('html, body').animate({
 
-  });
+                scrollTop: $($(this).attr('href')).offset().top,
+
+            },
+            500,
+            'linear'
+        );
+
+    });
 
 });
